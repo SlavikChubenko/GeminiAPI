@@ -35,7 +35,15 @@ public class JSONParser {
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
         System.out.println(response.body());
-        fileWriter.append(response.body());
+        try{
+            fileWriter.append(response.body());
+            System.out.println("fileWriter.append(response.body()) - ok");
+        }
+        catch (IOException e){
+            System.out.println("An error 5 !!! fileWriter.append(response.body()) - not ok");
+            e.printStackTrace();
+        }
+
     }
 
     public static void Output(ArrayList<String> list){
