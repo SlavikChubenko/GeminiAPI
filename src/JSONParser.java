@@ -18,7 +18,7 @@ public class JSONParser {
         this.fileName = fileName;
     }
 
-    public static void htmlOutput(FileWriter fileWriter,String apiKey, String nameModel, ArrayList<String> list,
+    public static void htmlOutput(FileWriter fileWriter, String apiKey, String nameModel, ArrayList<String> list,
                                   String fileName) throws IOException, InterruptedException {
         String apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/" + nameModel +
                 ":generateContent?key=" + apiKey;
@@ -35,15 +35,8 @@ public class JSONParser {
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
         System.out.println(response.body());
-        try{
-            fileWriter.append(response.body());
-            System.out.println("fileWriter.append(response.body()) - ok");
-        }
-        catch (IOException e){
-            System.out.println("An error 5 !!! fileWriter.append(response.body()) - not ok");
-            e.printStackTrace();
-        }
 
+        fileWriter.append(response.body());
     }
 
     public static void Output(ArrayList<String> list){
