@@ -8,9 +8,6 @@ import java.time.Duration;
 import java.util.ArrayList;
 
 public class JSONParser {
-    JSONParser(){
-    }
-
     public static void htmlOutput(FileWriter fileWriter, String apiKey, String nameModel, ArrayList<String> list
                                   ) throws IOException, InterruptedException {
         String apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/" + nameModel +
