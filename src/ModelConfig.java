@@ -2,19 +2,19 @@ import java.util.Scanner;
 
 public class ModelConfig {
     private String apiKey;
-    private String nameModel;
+    private String modelName;
 
-    ModelConfig(String apiKey, String nameModel){
+    ModelConfig(String apiKey, String modelName){
         this.apiKey = apiKey;
-        this.nameModel = nameModel;
+        this.modelName = modelName;
     }
 
     public String getApiKey() {
         return apiKey;
     }
 
-    public String getNameModel() {
-        return nameModel;
+    public String getModelName() {
+        return modelName;
     }
     
     public String getScanner(){
