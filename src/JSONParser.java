@@ -37,7 +37,7 @@ public class JSONParser {
         System.out.println(response.body());
 
         fileWriter.append(response.body());
-
+        fileWriter.flush();
     }
 
     public static void Output(ArrayList<String> list){
