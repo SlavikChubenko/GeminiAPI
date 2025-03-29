@@ -8,18 +8,11 @@ import java.time.Duration;
 import java.util.ArrayList;
 
 public class JSONParser {
-    private String apiKey;
-    private String nameModel;
-    private String fileName;
-
-    JSONParser(String apiKey, String nameModel, String fileName){
-        this.apiKey = apiKey;
-        this.nameModel = nameModel;
-        this.fileName = fileName;
+    JSONParser(){
     }
 
-    public static void htmlOutput(FileWriter fileWriter, String apiKey, String nameModel, ArrayList<String> list,
-                                  String fileName) throws IOException, InterruptedException {
+    public static void htmlOutput(FileWriter fileWriter, String apiKey, String nameModel, ArrayList<String> list
+                                  ) throws IOException, InterruptedException {
         String apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/" + nameModel +
                 ":generateContent?key=" + apiKey;
         HttpClient client = HttpClient.newBuilder()
@@ -40,7 +33,7 @@ public class JSONParser {
         fileWriter.flush();
     }
 
-    public static void Output(ArrayList<String> list){
+    public static void output(ArrayList<String> list){
         for(String output : list){
             System.out.println(output);
         }
