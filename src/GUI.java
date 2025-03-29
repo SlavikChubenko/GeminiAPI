@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GUI {
-    public void mainOutput(String question, Scanner scanner1, ArrayList<String> list, String apiKey,
+    public static void mainOutput(String question, Scanner scanner1, ArrayList<String> list, String apiKey,
                            String modelName, FileWriter firstFileWriter, boolean switcher) throws IOException, InterruptedException {
         question = scanner1.nextLine();
         list.add(question);
@@ -32,7 +32,7 @@ public class GUI {
                     JSONParser.output(list);
         }
     }
-    public void periosOutput(File file, boolean switcher) throws FileNotFoundException {
+    public static void previuosOutput(File file, boolean switcher) throws FileNotFoundException {
         Scanner scanner = new Scanner(file);
         if(switcher)
             while (scanner.hasNextLine()) {

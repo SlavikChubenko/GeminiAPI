@@ -19,11 +19,9 @@ public class Main {
         Scanner scanner1 = new Scanner(System.in);
         ArrayList<String> list = new ArrayList<>();
 
-        GUI gui = new GUI();
-
         while (true) {
-            gui.periosOutput(firstFile, true);
-            gui.mainOutput(question, scanner1, list, apiKey, modelName, firstFileWriter,
+            GUI.previuosOutput(firstFile, true);
+            GUI.mainOutput(question, scanner1, list, apiKey, modelName, firstFileWriter,
                     true);
             System.out.println("Write it for exit: 0" + "\n" + "Write it for change: 1");
 
