@@ -10,13 +10,13 @@ public class Main {
         String apiKey = "";
         String modelName = "gemini-2.0-flash-lite";
 
-        /// можно ли как-то упростить этот ебаный код?
+        /// could am I easier that code?
 //        File firstFile = new File(firstFileName);
 //        File secondFile = new File(secondFileName);
 //        String firstFileName = "first.txt";
 //        FileWriter firstFileWriter = new FileWriter(firstFileName, true);
 //        FileWriter secondFileWriter = new FileWriter(secondFile, true);
-        /// можно ли как-то упростить этот ебаный код?
+        /// could am I easier that code?
 //        System.out.println(firstFile);
 
         Scanner scanner1 = new Scanner(System.in);
